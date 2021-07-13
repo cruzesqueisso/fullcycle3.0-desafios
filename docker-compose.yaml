@@ -1,0 +1,17 @@
+version: '3'
+
+services:
+    backend:
+        image: cruzesqueisso/fullcycle-backend:v1
+        container_name: backend-app
+        ports:
+            - 3000:3000
+        extra_hosts: 
+            - 'host.docker.internal:172.17.0.1'
+    frontend:
+        image: cruzesqueisso/fullcycle-frontend:v1
+        container_name: frontend-app
+        ports:
+            - 3001:3001
+        extra_hosts: 
+            - 'host.docker.internal:172.17.0.1'
